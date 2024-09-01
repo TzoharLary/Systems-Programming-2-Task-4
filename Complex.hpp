@@ -11,12 +11,10 @@ public:
     Complex(double real, double image);
     double getReal() const;
     double getImage() const;
-    friend bool operator==(const Complex &a, const Complex &b)
-    {
+    friend bool operator==(const Complex &a, const Complex &b) {
         return (a.getReal() == b.getReal() && a.getImage() == b.getImage());
     }
-    friend std::ostream &operator<<(std::ostream &os, const Complex &c)
-    {
+    friend std::ostream &operator<<(std::ostream &os, const Complex &c) {
         os << c.getReal() << " + " << c.getImage() << "i";
         return os;
     }
